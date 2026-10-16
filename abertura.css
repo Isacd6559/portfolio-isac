@@ -1,0 +1,245 @@
+/* =========================================================
+   ABERTURA
+   Tela cheia preta: ponto que quica → "!" → ISAC → PORTFÓLIO →
+   retrato em partículas. Quem anima é o js/abertura.js (letras)
+   e o js/particulas.js (retrato); aqui fica só a aparência.
+   ========================================================= */
+
+.intro {
+  --g: clamp(16px, 3.3vw, 48px);           /* margem lateral da abertura */
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  min-height: 520px;
+  padding: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--stage);
+  color: var(--stage-ink);
+  font-family: var(--font-intro);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* luz suave no centro do palco */
+.intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(70% 62% at 50% 46%, var(--stage-lift) 0%, color-mix(in srgb, var(--stage-lift) 35%, var(--stage)) 52%, var(--stage) 100%);
+}
+
+/* brilho que acende quando o ponto bate no chão */
+.iglow {
+  position: absolute;
+  left: 0; top: 0;
+  width: 60vmin; height: 60vmin;
+  margin: -30vmin 0 0 -30vmin;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.11) 26%, rgba(255, 255, 255, 0.03) 48%, rgba(255, 255, 255, 0) 68%);
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* ---------- palavra (cada letra é um .slot com um .ch dentro) ---------- */
+
+.iw {
+  position: absolute;
+  left: 50%; top: 55%;
+  width: 0; height: 0;
+  z-index: 2;
+  font-family: var(--font-intro);
+  font-weight: 900;
+  font-size: 120px;
+  line-height: 1;
+}
+
+.iw-in {
+  position: absolute;
+  left: 0; top: 0;
+  transform: translateX(calc(var(--shift, 0) * 1em));
+}
+
+.slot {
+  position: absolute;
+  left: calc(var(--x, 0) * 1em);
+  top: 0;
+  width: 0; height: 0;
+}
+
+/* letra cromada: branco em cima, cinza embaixo */
+.ch {
+  position: absolute;
+  left: -0.06em;
+  bottom: calc(var(--b, 0.2) * -1em);
+  display: block;
+  padding: 0.26em 0.06em 0.14em;
+  white-space: pre;
+  background: linear-gradient(180deg, var(--chrome-hi) 0%, var(--chrome-hi) 36%, var(--chrome-mid) 55%, var(--chrome-lo) 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transform-origin: 50% 52%;
+  backface-visibility: hidden;
+}
+
+/* o ponto do "!" */
+.idot {
+  position: absolute;
+  left: calc(var(--dx, 0) * 1em);
+  top: 0.3em;
+  width: 0.17em; height: 0.17em;
+  margin: -0.085em 0 0 -0.085em;
+  border-radius: 50%;
+  background: radial-gradient(circle at 36% 30%, var(--chrome-hi) 0%, var(--chrome-hi) 35%, var(--chrome-mid) 100%);
+  box-shadow: 0 0 0.25em rgba(255, 255, 255, 0.35);
+  opacity: 0;
+}
+
+/* canvas do retrato em partículas */
+.icanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* ---------- menu do topo ---------- */
+
+.inav {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: calc(var(--g) * 0.6) var(--g) 0;
+}
+
+.ilogo {
+  font-family: var(--font-intro);
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  color: var(--stage-ink);
+  white-space: nowrap;
+}
+
+.inav ul { display: flex; gap: clamp(0.9rem, 2.2vw, 2rem); }
+
+.inav ul a {
+  display: block;
+  font-family: var(--font-intro);
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--stage-muted);
+  padding-block: 0.35rem;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.inav ul a:hover,
+.inav ul a[aria-current] { color: var(--stage-ink); border-color: currentColor; }
+
+/* ---------- rodapé da abertura: subtítulo e botões ---------- */
+
+.imeta {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  padding: 0 var(--g) calc(var(--g) * 0.75);
+}
+
+.isub {
+  font-family: var(--font-intro);
+  font-size: clamp(0.95rem, 0.88rem + 0.3vw, 1.15rem);
+  letter-spacing: -0.01em;
+  color: var(--stage-ink);
+  min-width: 0;
+}
+
+.isub b { font-weight: 700; }
+.isub i { font-weight: 400; color: var(--stage-muted); }
+
+.iacts { display: flex; align-items: center; gap: 0.5rem; }
+
+.iround,
+.ipill {
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--stage-line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--stage-ink);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.iround { width: 2.3rem; height: 2.3rem; border-radius: 50%; padding: 0; }
+.iround svg { width: 0.95rem; height: 0.95rem; }
+
+.ipill {
+  font-family: var(--font-intro);
+  font-size: 0.8rem;
+  font-weight: 500;
+  height: 2.3rem;
+  padding: 0 1.1rem;
+  border-radius: 999px;
+}
+
+.iround:hover, .ipill:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(242, 243, 247, 0.4); }
+
+.intro a:focus-visible,
+.intro button:focus-visible { outline: 2px solid var(--stage-ink); outline-offset: 3px; }
+
+/* "Pular intro": só aparece enquanto a animação roda */
+.iskip {
+  position: absolute;
+  right: var(--g);
+  bottom: calc(var(--g) * 0.75);
+  z-index: 5;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stage-muted);
+  background: none;
+  border: 1px solid var(--stage-line);
+  border-radius: 999px;
+  padding: 0.5rem 0.95rem;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, color 0.2s ease;
+}
+
+.iskip:hover { color: var(--stage-ink); }
+.intro.is-intro .iskip { opacity: 1; pointer-events: auto; }
+
+/* "Ver animação": só aparece quando o sistema pede menos animação */
+.intro .iplay { display: none; grid-auto-flow: column; gap: 0.45rem; }
+.intro.is-reduced .iplay { display: inline-grid; }
+.iplay svg { width: 0.7rem; height: 0.7rem; }
+
+/* menu e rodapé entram no fim da animação (o JS mostra) */
+.intro .inav,
+.intro .imeta { opacity: 0; }
+
+@media (max-width: 640px) {
+  .inav .hide-sm { display: none; }
+}
