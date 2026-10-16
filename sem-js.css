@@ -1,0 +1,4 @@
+/* Carregado só quando o JavaScript está desligado (ver <noscript> no index.html):
+   sem a animação, o menu e os botões da abertura aparecem direto. */
+.intro .inav,
+.intro .imeta { opacity: 1; }

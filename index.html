@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Isac Daniel Mendonça</title>
+  <meta name="description" content="Portfólio de Isac Daniel: Dev Júnior e Suporte de TI em São Paulo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter+Tight:ital,wght@0,400..900;1,400..500&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap">
+
+  <!-- estilos: base primeiro, depois cada parte da página -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/abertura.css">
+  <link rel="stylesheet" href="css/secoes.css">
+  <link rel="stylesheet" href="css/projetos.css">
+  <noscript><link rel="stylesheet" href="css/sem-js.css"></noscript>
+</head>
+<body>
+
+<!-- ===================== ABERTURA ===================== -->
+<section class="intro" id="inicio" aria-label="Abertura do portfólio de Isac Daniel">
+  <h2 class="sr-only">Portfólio de Isac Daniel</h2>
+  <div class="iglow" aria-hidden="true"></div>
+  <div class="iw" aria-hidden="true"><div class="iw-in"><span class="idot"></span></div></div>
+  <canvas class="icanvas" aria-hidden="true"></canvas>
+
+  <nav class="inav" aria-label="Navegação">
+    <a class="ilogo" href="#inicio">ISAC DANIEL</a>
+    <ul>
+      <li><a href="#inicio" aria-current="page">Início</a></li>
+      <li class="hide-sm"><a href="#sobre">Sobre</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li class="hide-sm"><a href="#formacao">Formação</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <div class="imeta">
+    <p class="isub"><b>Dev Júnior</b> <i>&amp; Suporte de TI</i></p>
+    <div class="iacts">
+      <button class="ipill iplay" type="button" data-play>
+        <svg viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M3 1.8v8.4L10 6z"/></svg>
+        Ver animação
+      </button>
+      <button class="iround" type="button" data-replay aria-label="Ver a abertura de novo" title="Ver a abertura de novo">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8a5.5 5.5 0 1 0 1.7-3.98"/><path d="M2.5 2.5v3h3"/></svg>
+      </button>
+      <a class="iround" href="#sobre" aria-label="Ir para o conteúdo">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v11"/><path d="M3.5 9 8 13.5 12.5 9"/></svg>
+      </a>
+      <a class="ipill" href="#contato">Contato</a>
+    </div>
+  </div>
+
+  <button class="iskip" type="button">Pular intro</button>
+</section>
+
+<!-- ===================== SOBRE ===================== -->
+<header class="hero" id="sobre">
+  <div class="wrap">
+    <p class="eyebrow avail"><span class="dot"></span>Disponível para estágio e vagas júnior · São Paulo</p>
+    <h1 class="name">
+      <span class="l1">Isac <span class="mark">Daniel</span></span>
+      <span class="l2">Cardoso Mendonça</span>
+    </h1>
+    <div class="hero-body">
+      <div>
+        <p class="lede">
+          Técnico em <b>Hardware e Redes</b> e estudante de <b>ADS</b>. Faço sistemas
+          para problemas reais: um deles já está em teste na portaria de um condomínio,
+          rodando no celular dos porteiros e no PC da portaria.
+        </p>
+        <div class="actions">
+          <a class="btn wa" href="https://wa.me/5511963608254" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+          <a class="btn ghost" href="#projetos">Ver os projetos</a>
+        </div>
+      </div>
+      <nav class="links" aria-label="Contato">
+        <a href="https://wa.me/5511963608254" target="_blank" rel="noopener"><span>WhatsApp</span><span>(11) 96360-8254</span></a>
+        <a href="mailto:isacd6559@gmail.com"><span>E-mail</span><span>isacd6559@gmail.com</span></a>
+        <a href="https://www.linkedin.com/in/isac-daniel-cardoso-mendon%C3%A7a-001321269/" target="_blank" rel="noopener"><span>LinkedIn</span><span>isac-daniel-cardoso-mendonça</span></a>
+        <a href="https://github.com/Isacd6559" target="_blank" rel="noopener"><span>GitHub</span><span>Isacd6559</span></a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== FAIXA DE TECNOLOGIAS ===================== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>TypeScript</span><span>React</span><span>Vite · PWA</span><span>Java · Spring Boot</span><span>MySQL</span><span>Capacitor · APK Android</span><span>Redes</span><span>Segurança da Informação</span>
+    <span>TypeScript</span><span>React</span><span>Vite · PWA</span><span>Java · Spring Boot</span><span>MySQL</span><span>Capacitor · APK Android</span><span>Redes</span><span>Segurança da Informação</span>
+  </div>
+</div>
+
+<main>
+  <!-- ===================== PROJETOS ===================== -->
+  <section id="projetos">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Cinco projetos</p>
+        <h2>O que eu construí até aqui</h2>
+      </div>
+
+      <!-- GALERIA NOVENTA -->
+      <article class="project galeria">
+        <div>
+          <div class="project-title-row">
+            <h3>Galeria Noventa</h3>
+            <span class="status">Em teste com o cliente</span>
+          </div>
+          <p class="tagline">Controle da portaria de um condomínio de duas torres.</p>
+          <p class="summary">
+            App feito sob encomenda para a portaria do condomínio Galeria Noventa (Torre M e
+            Torre C). O porteiro registra o carro do visitante com foto, placa e prisma, e o
+            app avisa quando o limite de 12 horas da vaga está acabando. Roda nos celulares
+            da portaria e no PC, com banco próprio em cada um.
+          </p>
+          <ul class="features">
+            <li><strong>Vagas de visitantes</strong> com foto, placa, visitante e prisma, limite de 12 h, alerta de vencimento e histórico.</li>
+            <li><strong>Leitura automática da placa</strong> pela foto do veículo, que preenche o campo sozinha.</li>
+            <li><strong>Controle de chaves</strong> da portaria: torre, apartamento e quem retirou cada uma das cerca de 60 chaves.</li>
+            <li><strong>Encomendas:</strong> recebimento, aviso ao morador pelo WhatsApp e retirada, com expedição separada por torre.</li>
+            <li><strong>Login de funcionários</strong>, log de auditoria só para administradores e abas de veículos sem cadastro e denúncias.</li>
+          </ul>
+        </div>
+        <div class="aside">
+          <div class="mock" aria-hidden="true">
+            <div class="mock-bar"><span>Vagas de visitantes</span><b>3 de 4 ocupadas</b></div>
+            <div class="spots">
+              <div class="spot"><span class="plate">BRA2E19</span><span>Apto M-112 · prisma 07</span><span class="left">8h12 restantes</span></div>
+              <div class="spot warn"><span class="plate">RIO4F27</span><span>Apto C-208 · prisma 03</span><span class="left">vence em 25 min</span></div>
+              <div class="spot"><span class="plate">SPA1B88</span><span>Apto M-045 · prisma 11</span><span class="left">11h40 restantes</span></div>
+              <div class="spot free"><span class="plate">VAGA 4</span><span>livre</span><span class="left"></span></div>
+            </div>
+            <div class="mock-bar mock-bar--rodape"><span>Chaves fora · 4</span><b>Encomendas · 11 aguardando</b></div>
+          </div>
+          <dl class="spec">
+            <div class="spec-row">
+              <dt>Stack</dt>
+              <dd class="chips"><span class="chip">TypeScript</span><span class="chip">Vite</span><span class="chip">PWA</span><span class="chip">APK Android</span><span class="chip">Versão para PC</span></dd>
+            </div>
+            <div class="spec-row">
+              <dt>Meu papel</dt>
+              <dd>Levantamento com a portaria, desenvolvimento do app e versões de teste para o cliente.</dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+
+      <!-- MÓDULO -->
+      <article class="project modulo">
+        <div>
+          <div class="project-title-row">
+            <h3>Módulo</h3>
+            <span class="status">Em planejamento</span>
+          </div>
+          <p class="tagline">Software de portaria que se monta para cada condomínio.</p>
+          <p class="summary">
+            A base do Galeria Noventa transformada em produto para qualquer prédio. Na
+            implantação, um questionário com o cliente define quais módulos ligar, e o
+            sistema entra com o nome e a logo do condomínio.
+          </p>
+          <ul class="features">
+            <li><strong>Módulos que ligam e desligam:</strong> vagas de visitantes, veículos, entrada e saída, carro elétrico e encomendas.</li>
+            <li><strong>Nome e logo de cada condomínio</strong>, com prazos e dias ajustáveis pelo administrador.</li>
+            <li><strong>Funciona sem internet:</strong> o sistema é online, mas a portaria não para quando a conexão cai.</li>
+            <li><strong>Locker de encomendas</strong> (armário inteligente) como módulo opcional.</li>
+          </ul>
+        </div>
+        <div class="aside">
+          <div class="mock" aria-hidden="true">
+            <div class="mock-bar"><span>Implantação · condomínio exemplo</span><b>5 módulos ativos</b></div>
+            <ul class="mods">
+              <li class="on"><span>Vagas de visitantes</span><i></i></li>
+              <li class="on"><span>Veículos</span><i></i></li>
+              <li class="on"><span>Entrada e saída</span><i></i></li>
+              <li class="on"><span>Encomendas</span><i></i></li>
+              <li><span>Carro elétrico</span><i></i></li>
+              <li class="on"><span>Locker de encomendas</span><i></i></li>
+            </ul>
+            <div class="mock-bar mock-bar--rodape"><span>Internet caiu</span><b>Portaria segue funcionando</b></div>
+          </div>
+          <dl class="spec">
+            <div class="spec-row">
+              <dt>Base</dt>
+              <dd class="chips"><span class="chip">Online + offline</span><span class="chip">Módulos configuráveis</span><span class="chip">Marca do cliente</span></dd>
+            </div>
+            <div class="spec-row">
+              <dt>Meu papel</dt>
+              <dd>Concepção do produto e desenho dos módulos a partir do que funcionou na Galeria Noventa.</dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+
+      <!-- PARKCONTROL -->
+      <article class="project park">
+        <div>
+          <div class="project-title-row">
+            <h3>ParkControl</h3>
+            <span class="status">Primeira versão</span>
+          </div>
+          <p class="tagline">Gestão para uma rede de estacionamentos.</p>
+          <p class="summary">
+            Sistema que cobra por hora, controla as vagas e o caixa, e separa o financeiro de
+            cada unidade da rede. Roda no PC do estacionamento como programa instalado, e o
+            nome do app pode ser trocado para a marca de cada cliente.
+          </p>
+          <ul class="features">
+            <li><strong>Cobrança por hora</strong> pela tabela de tarifas, com comprovante para o cliente.</li>
+            <li><strong>Controle de vagas:</strong> entrada, saída e ocupação de cada unidade.</li>
+            <li><strong>Caixa e financeiro por unidade</strong>, para o dono enxergar a rede inteira.</li>
+            <li><strong>Executável para PC</strong>, pronto para instalar no computador do estacionamento.</li>
+          </ul>
+        </div>
+        <div class="aside">
+          <div class="mock" aria-hidden="true">
+            <div class="mock-bar"><span>Unidade Centro · caixa aberto</span><b>38 / 60 vagas</b></div>
+            <div class="meter meter--63"><i></i></div>
+            <div class="receipt">
+              <div><span>Placa</span><b>BRA2E19</b></div>
+              <div><span>Entrada → saída</span><b>09:12 → 11:47</b></div>
+              <div><span>1ª hora + 2 adicionais</span><b>R$ 10 + R$ 8</b></div>
+              <div class="total"><span>Total</span><b>R$ 18,00</b></div>
+            </div>
+            <div class="units">
+              <div><span>Centro · hoje</span><b>R$ 1.240</b></div>
+              <div><span>Paulista · hoje</span><b>R$ 980</b></div>
+              <div><span>Moema · hoje</span><b>R$ 615</b></div>
+            </div>
+          </div>
+          <dl class="spec">
+            <div class="spec-row">
+              <dt>Base</dt>
+              <dd class="chips"><span class="chip">Programa para PC</span><span class="chip">Executável</span><span class="chip">Várias unidades</span></dd>
+            </div>
+            <div class="spec-row">
+              <dt>Meu papel</dt>
+              <dd>Regras de cobrança, telas do sistema e o executável para o PC do cliente.</dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+
+      <!-- SPEAKQUEST -->
+      <article class="project speak">
+        <div>
+          <div class="project-title-row">
+            <h3>SpeakQuest</h3>
+            <span class="status">Em desenvolvimento</span>
+          </div>
+          <p class="tagline">“Seu inglês evolui todos os dias.”</p>
+          <p class="summary">
+            App de idiomas com trilha de lições progressiva, no formato que já provou que
+            funciona — só que com quatro idiomas e uma trilha bônus própria. Roda como
+            aplicativo web e como app Android, gerado por Capacitor a partir do mesmo
+            código React.
+          </p>
+          <ul class="features">
+            <li><strong>Dez tipos de exercício</strong> na mesma trilha, de tradução a pronúncia por voz e modo de conversação.</li>
+            <li><strong>XP, streak, vidas e coins</strong> — o sistema que segura o aluno voltando todo dia.</li>
+            <li><strong>Trilha premium nível 5:</strong> Business English, inglês para viagem, preparação para provas e gírias.</li>
+            <li><strong>Inglês, espanhol, francês e alemão</strong>, com interface em português ou inglês.</li>
+            <li><strong>Login e assinatura em banco de dados</strong>, sincronizando o progresso entre o app e a web.</li>
+          </ul>
+        </div>
+        <div class="aside">
+          <div class="mock" aria-hidden="true">
+            <div class="mock-bar"><span>Nível 3 · Unidade 2</span><b>12 dias seguidos</b></div>
+            <div class="meter meter--68"><i></i></div>
+            <div class="mock-bar mock-bar--rodape">
+              <span>340 / 500 XP</span>
+              <span class="hearts"><i class="heart"></i><i class="heart"></i><i class="heart"></i><i class="heart off"></i><i class="heart off"></i></span>
+            </div>
+            <p class="q">Traduza: <strong>“Eu preciso de ajuda com isso.”</strong></p>
+            <div class="opts">
+              <div class="opt ok"><span>I need help with this.</span><span>✓</span></div>
+              <div class="opt"><span>I need a help of this.</span><span></span></div>
+              <div class="opt"><span>I needing help this.</span><span></span></div>
+            </div>
+          </div>
+          <dl class="spec">
+            <div class="spec-row">
+              <dt>Stack</dt>
+              <dd class="chips"><span class="chip">React</span><span class="chip">Vite</span><span class="chip">PWA</span><span class="chip">Capacitor</span><span class="chip">Android Studio</span></dd>
+            </div>
+            <div class="spec-row">
+              <dt>Meu papel</dt>
+              <dd>Concepção, front-end, separação de front e back e empacotamento do APK.</dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+
+      <!-- MERCADOSMART -->
+      <article class="project mercado">
+        <div>
+          <div class="project-title-row">
+            <h3>MercadoSmart</h3>
+            <span class="status">Em desenvolvimento</span>
+          </div>
+          <p class="tagline">Gestão completa para o mercado de bairro.</p>
+          <p class="summary">
+            Sistema para o pequeno varejo que ainda controla o estoque no caderno. Junta
+            PDV, estoque, margem e painel financeiro em um lugar só — e usa os próprios
+            dados de venda para sugerir preço e apontar o produto que está encalhado na
+            prateleira.
+          </p>
+          <ul class="features">
+            <li><strong>Índice de Saúde do Produto:</strong> nota de 0 a 100 por item, calculada a partir de vendas, lucro, tempo parado, estoque e validade.</li>
+            <li><strong>Estoque com alerta</strong> de quantidade mínima e de produtos perto do vencimento.</li>
+            <li><strong>Calculadora de lucro e margem</strong> com sugestão automática de preço de venda.</li>
+            <li><strong>PDV e dashboard</strong> com gráficos de vendas, estoque e resultado.</li>
+            <li><strong>Acesso por nível:</strong> administrador, gerente e caixa, cada um com o que precisa.</li>
+          </ul>
+        </div>
+        <div class="aside">
+          <div class="mock" aria-hidden="true">
+            <div class="mock-bar"><span>Índice de Saúde</span><b>Estoque · 128 itens</b></div>
+            <div class="gauge-row">
+              <svg class="gauge" width="124" height="72" viewBox="0 0 124 72" role="img">
+                <path class="track" d="M 10 62 A 52 52 0 0 1 114 62"></path>
+                <path class="val" d="M 10 62 A 52 52 0 0 1 114 62"></path>
+                <text x="62" y="60" text-anchor="middle" font-size="26">82</text>
+              </svg>
+              <div class="rank">
+                <div class="rank-row"><span>Arroz 5kg</span><b>91</b></div>
+                <div class="rank-row"><span>Café 500g</span><b>78</b></div>
+                <div class="rank-row low"><span>Refrigerante 2L</span><b>47</b></div>
+                <div class="rank-row low"><span>Panetone</span><b>19</b></div>
+              </div>
+            </div>
+            <div class="mock-bar mock-bar--rodape"><span>Sugestão de preço</span><b>R$ 24,90 → R$ 22,50</b></div>
+          </div>
+          <dl class="spec">
+            <div class="spec-row">
+              <dt>Stack</dt>
+              <dd class="chips"><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">MySQL</span><span class="chip">React</span></dd>
+            </div>
+            <div class="spec-row">
+              <dt>Meu papel</dt>
+              <dd>Documento do projeto, modelagem do banco e da API, e implementação.</dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== FORMAÇÃO ===================== -->
+  <section id="formacao">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Base</p>
+        <h2>Formação e ferramentas</h2>
+      </div>
+      <div class="facts">
+        <article class="fact">
+          <p class="when">Em curso</p>
+          <h3>Análise e Desenvolvimento de Sistemas</h3>
+          <p>Centro Universitário Católico Ítalo Brasileiro</p>
+        </article>
+        <article class="fact">
+          <p class="when">Concluído</p>
+          <h3>Técnico em Hardware e Redes</h3>
+          <p>Montagem, manutenção, redes e infraestrutura — a base que sustenta o resto.</p>
+        </article>
+        <article class="fact">
+          <p class="when">Certificado</p>
+          <h3>Segurança da Informação</h3>
+          <p>Fundamentos de proteção de dados, boas práticas e superfície de ataque.</p>
+        </article>
+        <article class="fact">
+          <p class="when">2026</p>
+          <h3>Santander Open Academy</h3>
+          <p>Ciência de Dados (agosto) e Segurança em Tecnologia (junho a setembro).</p>
+        </article>
+      </div>
+
+      <div class="stacks">
+        <div class="stack-group">
+          <h3>Front-end</h3>
+          <div class="chips"><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">Vite</span><span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">PWA</span></div>
+        </div>
+        <div class="stack-group">
+          <h3>Back-end &amp; dados</h3>
+          <div class="chips"><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">API REST</span><span class="chip">MySQL</span><span class="chip">Modelagem</span></div>
+        </div>
+        <div class="stack-group">
+          <h3>Mobile &amp; desktop</h3>
+          <div class="chips"><span class="chip">APK Android</span><span class="chip">Capacitor</span><span class="chip">Android Studio</span><span class="chip">Executável para PC</span></div>
+        </div>
+        <div class="stack-group">
+          <h3>Infra &amp; segurança</h3>
+          <div class="chips"><span class="chip">Redes</span><span class="chip">Hardware</span><span class="chip">Suporte técnico</span><span class="chip">Checklist OWASP</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== CONTATO ===================== -->
+<footer id="contato">
+  <div class="wrap">
+    <p class="eyebrow">Bora conversar</p>
+    <div class="cta">
+      <div>
+        <h2>Procuro minha <em>primeira vaga</em> em tecnologia.</h2>
+        <p>
+          Estágio ou júnior, em desenvolvimento ou suporte — presencial, híbrido ou
+          remoto. Me chama no WhatsApp que eu mostro qualquer um destes projetos por
+          dentro.
+        </p>
+      </div>
+      <div class="actions">
+        <a class="btn wa" href="https://wa.me/5511963608254" target="_blank" rel="noopener">(11) 96360-8254</a>
+        <a class="btn ghost" href="mailto:isacd6559@gmail.com">E-mail</a>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>Isac Daniel Cardoso Mendonça</span>
+      <span>São Paulo · Brasil</span>
+      <span>Projetos pessoais e acadêmicos · 2026</span>
+    </div>
+  </div>
+</footer>
+
+<!-- scripts: GSAP (animação das letras) e os arquivos do site, nesta ordem -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/particulas.js"></script>
+<script src="js/abertura.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

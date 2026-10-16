@@ -1,0 +1,225 @@
+/* =========================================================
+   SEÇÕES
+   Sobre, faixa de tecnologias, cabeçalho das seções,
+   formação e rodapé de contato.
+   ========================================================= */
+
+section { padding-block: clamp(3rem, 7vw, 5rem); }
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.section-head h2 { font-size: var(--step-2); }
+.section-head .eyebrow { white-space: nowrap; }
+.section-head::after { content: ""; flex: 1; height: 2px; background: var(--line); }
+
+/* ---------- SOBRE ---------- */
+
+.hero {
+  position: relative;
+  padding-block: clamp(2.5rem, 7vw, 5rem) clamp(2rem, 5vw, 3.5rem);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 70%;
+  background:
+    radial-gradient(42rem 22rem at 18% 0%, color-mix(in srgb, var(--brand) 14%, transparent), transparent 70%),
+    radial-gradient(34rem 20rem at 85% 15%, color-mix(in srgb, var(--p-modulo) 10%, transparent), transparent 70%);
+  filter: blur(6px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero > * { position: relative; z-index: 1; }
+
+.avail {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0.8rem 0.35rem 0.6rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 100px;
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  backdrop-filter: blur(4px);
+}
+
+/* bolinha verde "disponível" */
+.dot {
+  width: 0.5rem; height: 0.5rem;
+  border-radius: 50%;
+  background: var(--p-mercado);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--p-mercado) 60%, transparent);
+  animation: pulse 2.6s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--p-mercado) 55%, transparent); }
+  70%, 100% { box-shadow: 0 0 0 0.55rem transparent; }
+}
+
+.name {
+  font-size: var(--step-4);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  margin-top: 1.5rem;
+  line-height: 0.9;
+}
+
+.name .l2 { display: block; color: var(--muted); }
+
+.name .mark {
+  display: inline-block;
+  background: var(--brand);
+  color: var(--on-brand);
+  padding: 0 0.12em 0.06em;
+  transform: rotate(-1.4deg);
+}
+
+.hero-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  align-items: end;
+  margin-top: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.lede {
+  font-size: var(--step-1);
+  max-width: 40ch;
+}
+
+.lede b { font-weight: 600; box-shadow: inset 0 -0.42em 0 color-mix(in srgb, var(--brand) 22%, transparent); }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.6rem; }
+
+/* lista de contatos */
+.links {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  border-top: 2px solid var(--line-strong);
+}
+
+.links a {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.6rem;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.16s ease, padding-left 0.16s ease;
+}
+
+.links a span:last-child { color: var(--ink); text-align: right; word-break: break-word; }
+.links a:hover { color: var(--brand); padding-left: 0.35rem; }
+.links a:hover span:last-child { color: var(--brand); }
+
+/* ---------- FAIXA DE TECNOLOGIAS ---------- */
+
+.ticker {
+  border-block: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--muted);
+  overflow: hidden;
+  padding-block: 0.7rem;
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  gap: 2.5rem;
+  padding-right: 2.5rem;
+  animation: slide 32s linear infinite;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ticker-track span { display: flex; align-items: center; gap: 2.5rem; }
+.ticker-track span::after { content: "◆"; color: var(--brand); font-size: 0.7em; }
+
+@keyframes slide { to { transform: translateX(-50%); } }
+
+/* ---------- FORMAÇÃO ---------- */
+
+.facts {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.fact { background: var(--ground); padding: 1.3rem; display: grid; gap: 0.35rem; align-content: start; }
+.fact .when { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand); }
+.fact h3 { font-size: 1.02rem; }
+.fact p { color: var(--muted); font-size: 0.92rem; line-height: 1.45; }
+
+.stacks { display: grid; gap: 1.75rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); margin-top: 2.25rem; }
+
+.stack-group h3 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+/* ---------- RODAPÉ / CONTATO ---------- */
+
+footer {
+  background: var(--surface);
+  color: var(--ink);
+  border-top: 1px solid var(--line);
+  padding-block: clamp(3.25rem, 8vw, 5.5rem);
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.75rem;
+  align-items: end;
+  margin-top: 1.25rem;
+}
+
+.cta h2 { font-size: var(--step-3); max-width: 16ch; }
+.cta h2 em { font-style: normal; color: var(--brand); }
+.cta p { margin-top: 1rem; max-width: 44ch; color: var(--muted); }
+.cta .actions { margin: 0; }
+
+.colophon {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.5rem;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- celular / tablet ---------- */
+
+@media (max-width: 880px) {
+  .hero-body, .cta { grid-template-columns: minmax(0, 1fr); align-items: start; }
+}
